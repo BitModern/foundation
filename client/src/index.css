@@ -1,0 +1,411 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Corporate Slate Theme - Light Mode */
+  --background: hsl(210 20% 98%);           /* Cool white */
+  --foreground: hsl(222 47% 11%);           /* Rich navy */
+  --card: hsl(0 0% 100%);                   /* Pure white cards */
+  --card-foreground: hsl(222 47% 11%);      /* Rich navy text */
+  --popover: hsl(0 0% 100%);                /* White popovers */
+  --popover-foreground: hsl(222 47% 11%);   /* Rich navy popover text */
+  --primary: hsl(221 83% 53%);              /* Corporate blue */
+  --primary-foreground: hsl(210 20% 98%);   /* Light text on primary */
+  --secondary: hsl(210 40% 94%);            /* Light slate */
+  --secondary-foreground: hsl(222 47% 11%); /* Rich navy on secondary */
+  --muted: hsl(210 40% 96%);                /* Subtle backgrounds */
+  --muted-foreground: hsl(215 25% 27%);     /* Medium slate text */
+  --accent: hsl(210 40% 94%);               /* Light accent background */
+  --accent-foreground: hsl(221 83% 53%);    /* Corporate blue accent */
+  --destructive: hsl(0 84% 60%);            /* Corporate red */
+  --destructive-foreground: hsl(210 20% 98%); /* Light text on red */
+  --border: hsl(214 32% 80%);               /* Visible borders for clear definition */
+  --input: hsl(210 20% 93%);                /* Noticeably light gray inputs for contrast */
+  --ring: hsl(221 83% 53%);                 /* Corporate blue focus */
+  --chart-1: hsl(221 83% 53%);              /* Corporate blue */
+  --chart-2: hsl(142 76% 36%);              /* Success green */
+  --chart-3: hsl(25 95% 53%);               /* Corporate orange */
+  --chart-4: hsl(262 83% 58%);              /* Corporate purple */
+  --chart-5: hsl(0 84% 60%);                /* Corporate red */
+  --sidebar: hsl(0 0% 100%);                /* White sidebar */
+  --sidebar-foreground: hsl(222 47% 11%);   /* Rich navy sidebar text */
+  --sidebar-primary: hsl(221 83% 53%);      /* Corporate blue primary */
+  --sidebar-primary-foreground: hsl(210 20% 98%);
+  --sidebar-accent: hsl(210 40% 94%);       /* Light slate accent */
+  --sidebar-accent-foreground: hsl(221 83% 53%);
+  --sidebar-border: hsl(214 32% 91%);       /* Defined borders */
+  --sidebar-ring: hsl(221 83% 53%);
+  --font-sans: 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-serif: 'Times New Roman', Georgia, serif;
+  --font-mono: 'Consolas', 'Courier New', monospace;
+  --radius: 0.375rem;                       /* Clean corporate radius */
+  --shadow-2xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 2px 4px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 4px 6px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 8px 10px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  /* Corporate Slate Theme - Dark Mode */
+  --background: hsl(222 47% 8%);            /* Deep slate background */
+  --foreground: hsl(213 31% 91%);           /* Light slate text */
+  --card: hsl(222 47% 11%);                 /* Rich navy cards */
+  --card-foreground: hsl(213 31% 91%);      /* Light text on cards */
+  --popover: hsl(222 47% 11%);              /* Rich navy popovers */
+  --popover-foreground: hsl(213 31% 91%);   /* Light popover text */
+  --primary: hsl(217 92% 76%);              /* Bright corporate blue */
+  --primary-foreground: hsl(222 47% 11%);   /* Dark text on bright primary */
+  --secondary: hsl(217 33% 17%);            /* Dark slate secondary */
+  --secondary-foreground: hsl(213 31% 91%); /* Light text on secondary */
+  --muted: hsl(217 33% 17%);                /* Dark muted backgrounds */
+  --muted-foreground: hsl(215 20% 65%);     /* Medium slate text */
+  --accent: hsl(217 33% 17%);               /* Dark accent background */
+  --accent-foreground: hsl(217 92% 76%);    /* Bright blue accent */
+  --destructive: hsl(0 63% 71%);            /* Bright corporate red */
+  --destructive-foreground: hsl(213 31% 91%); /* Light text on red */
+  --border: hsl(217 33% 17%);               /* Dark defined borders */
+  --input: hsl(217 33% 17%);                /* Dark inputs */
+  --ring: hsl(217 92% 76%);                 /* Bright blue focus */
+  --chart-1: hsl(217 92% 76%);              /* Bright corporate blue */
+  --chart-2: hsl(142 76% 46%);              /* Success green */
+  --chart-3: hsl(25 95% 63%);               /* Corporate orange */
+  --chart-4: hsl(262 83% 68%);              /* Corporate purple */
+  --chart-5: hsl(0 63% 71%);                /* Bright corporate red */
+  --sidebar: hsl(222 47% 11%);              /* Rich navy sidebar */
+  --sidebar-foreground: hsl(213 31% 91%);   /* Light sidebar text */
+  --sidebar-primary: hsl(217 92% 76%);      /* Bright corporate blue */
+  --sidebar-primary-foreground: hsl(222 47% 11%);
+  --sidebar-accent: hsl(217 33% 17%);       /* Dark slate accent */
+  --sidebar-accent-foreground: hsl(217 92% 76%);
+  --sidebar-border: hsl(217 33% 17%);       /* Dark defined borders */
+  --sidebar-ring: hsl(217 92% 76%);
+  --font-sans: 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-serif: 'Times New Roman', Georgia, serif;
+  --font-mono: 'Consolas', 'Courier New', monospace;
+  --radius: 0.375rem;                       /* Clean corporate radius */
+  --shadow-2xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 2px 4px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 4px 6px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 8px 10px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  /* Dark mode styling for form elements and dropdowns */
+  .dark select,
+  .dark option {
+    background-color: hsl(var(--popover));
+    color: hsl(var(--popover-foreground));
+  }
+
+  .dark input[type="checkbox"] {
+    background-color: hsl(var(--background));
+    border-color: hsl(var(--border));
+  }
+
+  .dark input[type="checkbox"]:checked {
+    background-color: hsl(var(--primary));
+    border-color: hsl(var(--primary));
+  }
+
+  /* Enhanced toggle switch visibility in dark mode - more subtle approach */
+  .dark button[role="switch"][data-state="unchecked"] {
+    background-color: hsl(215 15% 25%) !important; /* Slightly lighter than default for better visibility */
+  }
+
+  /* Override Tailwind and Shadcn input styles for light mode contrast */
+  html:not(.dark) input[type="text"],
+  html:not(.dark) input[type="email"], 
+  html:not(.dark) input[type="password"],
+  html:not(.dark) input[type="url"],
+  html:not(.dark) input[type="search"],
+  html:not(.dark) input:not([type]),
+  html:not(.dark) textarea,
+  html:not(.dark) [data-radix-select-trigger],
+  html:not(.dark) .bg-input {
+    border: 2px solid #b8c5d1 !important;
+    background-color: #f1f3f5 !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Additional specificity for Tailwind classes */
+  html:not(.dark) .border-input {
+    border-color: #b8c5d1 !important;
+  }
+  
+  html:not(.dark) .bg-input {
+    background-color: #f1f3f5 !important;
+  }
+
+  /* Dark mode inputs with proper override */
+  .dark input[type="text"],
+  .dark input[type="email"], 
+  .dark input[type="password"],
+  .dark input[type="url"],
+  .dark input[type="search"],
+  .dark input:not([type]),
+  .dark textarea,
+  .dark [data-radix-select-trigger],
+  .dark .bg-input {
+    border: 1px solid hsl(var(--border)) !important;
+    background-color: hsl(var(--input)) !important;
+    box-shadow: none !important;
+  }
+
+  /* Comprehensive dark mode dropdown fixes */
+  .dark [data-radix-popper-content-wrapper],
+  .dark [data-radix-select-content],
+  .dark [data-radix-popover-content],
+  .dark .bg-popover {
+    background-color: hsl(var(--popover)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+  }
+
+  .dark [role="menu"],
+  .dark [role="listbox"],
+  .dark [data-radix-select-viewport],
+  .dark .bg-popover {
+    background-color: hsl(var(--popover)) !important;
+    color: hsl(var(--popover-foreground)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+  }
+
+  .dark [role="option"],
+  .dark [role="menuitem"],
+  .dark [data-radix-select-item],
+  .dark .bg-popover [role="option"] {
+    background-color: hsl(var(--popover)) !important;
+    color: hsl(var(--popover-foreground)) !important;
+  }
+
+  .dark [data-radix-select-item]:hover,
+  .dark [data-radix-select-item][data-highlighted],
+  .dark [role="option"]:hover {
+    background-color: hsl(var(--accent)) !important;
+    color: hsl(var(--accent-foreground)) !important;
+  }
+
+  /* Force all Select dropdowns in dark mode to have proper backgrounds */
+  .dark [data-radix-select-content] {
+    background: hsl(210 8% 14%) !important;
+    color: hsl(var(--popover-foreground)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .dark [data-radix-select-content] [data-radix-select-item] {
+    background: transparent !important;
+    color: hsl(var(--popover-foreground)) !important;
+  }
+
+  .dark [data-radix-select-content] [data-radix-select-item][data-highlighted] {
+    background: hsl(var(--accent)) !important;
+    color: hsl(var(--accent-foreground)) !important;
+  }
+
+  /* Target specific dropdowns that might still be transparent */
+  .dark [data-state="open"][data-side] {
+    background: hsl(210 8% 14%) !important;
+    border: 1px solid hsl(var(--border)) !important;
+  }
+
+  /* Ensure dialogs and their content have proper dark backgrounds */
+  .dark [data-radix-dialog-content] [data-radix-select-content] {
+    background: hsl(210 8% 14%) !important;
+    border: 1px solid hsl(var(--border)) !important;
+  }
+
+  .dark [role="option"]:hover,
+  .dark [role="menuitem"]:hover {
+    background-color: hsl(var(--accent)) !important;
+  }
+
+  /* Fix for select content */
+  .dark [data-radix-select-content] {
+    background-color: hsl(var(--popover)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+  }
+
+  /* Additional fixes for dropdown transparency in dark mode */
+  .dark [data-radix-select-viewport] {
+    background-color: hsl(var(--popover)) !important;
+  }
+
+  .dark [data-radix-select-item] {
+    background-color: hsl(var(--popover)) !important;
+    color: hsl(var(--popover-foreground)) !important;
+  }
+
+  .dark [data-radix-select-item][data-highlighted] {
+    background-color: hsl(var(--accent)) !important;
+    color: hsl(var(--accent-foreground)) !important;
+  }
+
+  /* Fix for command palette and combobox */
+  .dark [cmdk-root] {
+    background-color: hsl(var(--popover)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+  }
+
+  .dark [cmdk-list] {
+    background-color: hsl(var(--popover)) !important;
+  }
+
+  .dark [cmdk-item] {
+    background-color: hsl(var(--popover)) !important;
+    color: hsl(var(--popover-foreground)) !important;
+  }
+
+  .dark [cmdk-item][data-selected] {
+    background-color: hsl(var(--accent)) !important;
+    color: hsl(var(--accent-foreground)) !important;
+  }
+
+  .dark [data-radix-select-item] {
+    background-color: hsl(var(--popover)) !important;
+    color: hsl(var(--popover-foreground)) !important;
+  }
+
+  .dark [data-radix-select-item]:hover {
+    background-color: hsl(var(--accent)) !important;
+  }
+
+  /* Ensure test case output has proper dark styling */
+  .dark .test-case-output {
+    background-color: hsl(var(--card)) !important;
+    color: hsl(var(--card-foreground)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+  }
+
+  .dark .test-case-header {
+    background-color: hsl(var(--muted)) !important;
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  .dark .test-case-step {
+    background-color: hsl(var(--background)) !important;
+    color: hsl(var(--foreground)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+  }
+
+  .dark pre {
+    background-color: hsl(var(--muted)) !important;
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  .dark code {
+    background-color: hsl(var(--muted)) !important;
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  /* Fix shadcn/ui select components specifically */
+  .dark [data-radix-select-trigger] {
+    background-color: hsl(var(--background)) !important;
+    border-color: hsl(var(--border)) !important;
+    color: hsl(var(--foreground)) !important;
+  }
+
+  .dark [data-radix-select-content] {
+    background-color: hsl(var(--popover)) !important;
+    border-color: hsl(var(--border)) !important;
+    color: hsl(var(--popover-foreground)) !important;
+  }
+
+  .dark [data-radix-select-item] {
+    background-color: hsl(var(--popover)) !important;
+    color: hsl(var(--popover-foreground)) !important;
+  }
+
+  .dark [data-radix-select-item][data-highlighted] {
+    background-color: hsl(var(--accent)) !important;
+    color: hsl(var(--accent-foreground)) !important;
+  }
+
+  /* Fix checkbox components */
+  .dark [data-radix-checkbox-root] {
+    background-color: hsl(var(--background)) !important;
+    border-color: hsl(var(--border)) !important;
+  }
+
+  .dark [data-radix-checkbox-root][data-state="checked"] {
+    background-color: hsl(var(--primary)) !important;
+    border-color: hsl(var(--primary)) !important;
+  }
+
+  /* Override any lingering white backgrounds */
+  .dark .bg-white {
+    background-color: hsl(var(--card)) !important;
+  }
+
+  .dark .text-gray-900 {
+    color: hsl(var(--card-foreground)) !important;
+  }
+
+  .dark .text-gray-700 {
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  .dark .text-gray-600 {
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  .dark .text-gray-500 {
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  .dark .border-gray-200 {
+    border-color: hsl(var(--border)) !important;
+  }
+
+  .dark .bg-gray-50 {
+    background-color: hsl(var(--muted)) !important;
+  }
+
+  /* Custom scrollbar styles for better visibility */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: #9ca3af;
+  }
+
+  .dark .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+  }
+
+  .dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: #6b7280;
+  }
+}
